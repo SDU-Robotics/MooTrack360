@@ -1,10 +1,7 @@
 # 🐮 MooTrack360:  Novel Fisheye Camera Dataset for Robust Multi Dairy Cow Detection and Tracking
 
 ![Overview of MOOTrack360](Images/overview_image.png)
-[![Paper](https://img.shields.io/badge/Paper-DOI-blue)](https://doi.org/10.1109/XXXX.2025.1234567)
-[![License](https://img.shields.io/github/license/your-github-user/your-repo.svg)](LICENSE)
-[![GitHub issues](https://img.shields.io/github/issues/your-github-user/your-repo.svg)](https://github.com/Gjerlund/MooTrack360/issues)
-[![GitHub closed issues](https://img.shields.io/github/issues-closed/your-github-user/your-repo.svg)](https://github.com/Gjerlund/MooTrack360/issues/issues?q=is%3Aissue+is%3Aclosed)
+[![Paper](https://img.shields.io/badge/Paper-DOI-blue)](https://doi.org/10.5281/zenodo.15470268)
 
 <p align="center">
 A novel top-down fisheye dataset designed to facilitate around-the-clock livestock monitoring of Holstein dairy cows in large-scale stables. By providing 102.747 annotated cows through 1.500 images — each labelled as "<em>standing</em>" or "<em>lying</em>" — and an additional one-hour annotated video sequence for tracking evaluation, our dataset supports robust detection across variable lighting (from daylight to infrared) and enables direct welfare assessment. To correct fisheye distortion, we provide a detailed calibration pipeline based on the Double Sphere Camera model, ensuring precise localization and consistent annotations. Alongside the dataset, we release an end-to-end training framework that addresses common challenges such as illumination changes and occlusions. Benchmarks using state-of-the-art detection and tracking methods demonstrate the dataset’s capacity to drive advances in non-invasive, camera-based dairy farm monitoring.
