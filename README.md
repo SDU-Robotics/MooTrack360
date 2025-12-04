@@ -57,7 +57,7 @@ The easiet setup is to install MOOTrack360 in a virtual environment and install 
 
 clone the repository to a desired location
 ```python
-    git clone https://gitlab.sdu.dk/velkotek/VelKoTek-Project-Code.git
+    git clone https://github.com/SDU-Robotics/MooTrack360.git
 ```
 
 Open the parent directory of the proejct in VSCode 
