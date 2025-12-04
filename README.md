@@ -38,7 +38,7 @@ The MOOTrack360 is stored on Zenodo and contains the following content:
 <a id="sec-getting-started"></a>
 ## ℹ️ Getting Started 
 
-All of the data can be downloaded directly from Zenodo at ??. Please keep in mind there is more that 150 GB of data currently in the MOOTrack360. The following section will introduce the whole procedure of setting up the dataset for training, exporting a new detection model, and running the detector-tracker in conjuction on the a video sequence as done in the paper. 
+All of the data can be downloaded directly from Zenodo at [https://zenodo.org/records/15470268](https://zenodo.org/records/15470268). Please keep in mind there is more that 150 GB of data currently in the MOOTrack360. The following section will introduce the whole procedure of setting up the dataset for training, exporting a new detection model, and running the detector-tracker in conjuction on the a video sequence as done in the paper. 
 
 ### 💻 System Requriements 
 
