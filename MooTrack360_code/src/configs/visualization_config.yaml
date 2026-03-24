@@ -1,0 +1,8 @@
+instance_viz:
+  box: True
+  id: True
+  class: False
+  score: True
+  roi: True
+  FPS: True
+

@@ -1,0 +1,130 @@
+bytetracker:
+  track_thresh: 0.45            
+  track_buffer: 100
+  match_thresh: 0.8             
+  aspect_ratio_thresh: 0.0      
+  min_box_area: 10000.0
+  mot20: False
+  frame_rate: 10               
+
+botsort:
+  track_high_thresh: 0.8      
+  track_low_thresh: 0.5       
+  new_track_thresh: 0.86       
+  track_buffer: 100          
+  match_thresh: 0.8           
+  proximity_thresh: 0.7       
+  appearance_thresh: 0.15     
+  with_reid: False            
+  fast_reid_config: ""        
+  fast_reid_weights: ""       
+  device: "cuda"              
+  cmc_method: "none"          
+  name: "botsort"             
+  ablation: False             
+  mot20: False                
+  frame_rate: 10              
+
+smiletracker:
+    track_high_thresh: 0.8
+    track_low_thresh: 0.5
+    new_track_thresh: 0.86
+    track_buffer: 100
+    match_thresh: 0.8
+    aspect_ratio_thresh: 0.0
+    min_box_area: 10000.0
+    mot20: False
+    # Below only used if reid = true
+    proximity_thresh: 0.7
+    appearance_thresh: 0.15
+    with_reid: False
+    cmc_method: 'none' #'sparseOptFlow', "orb", "ecc", "sift", "none"
+    name: 'exp'
+    ablation: False
+
+sort:
+  max_age: 100
+  min_hits: 3
+  iou_threshold: 0.1    
+
+ocsort:
+  det_thresh: 0.4       
+  max_age: 100          
+  min_hits: 3           
+  iou_threshold: 0.1    
+  delta_t: 3            
+  asso_func: "iou"      
+  inertia: 0.2          
+  use_byte: False       
+
+deepsort:
+    metric: "cosine"
+    matching_threshold: 0.2  
+    budget: 
+    max_iou_distance: 2.0    
+    max_age: 80
+    n_init: 3
+    det_conf: 0.86            
+
+tracktor:
+  detection_person_thresh: 0.1    
+  regression_person_thresh: 0.3   
+  detection_nms_thresh: 0.5       
+  regression_nms_thresh: 0.5      
+  public_detections: true
+  inactive_patience: 100
+  do_reid: False
+  max_features_num: 20            
+  reid_sim_threshold: 0.3         
+  reid_iou_threshold: 0.3         
+  do_align: false
+  warp_mode: "MOTION_EUCLIDEAN"
+  number_of_iterations: 50        
+  termination_eps: 1e-3           
+  motion_model:
+    enabled: False
+    n_steps: 1
+    center_only: true
+
+conftrack:
+  tracker_name: "conftrack"
+  use_extractor: false     
+  use_cmc: false     
+  use_CFCM: false
+  use_LCTM: false
+  use_NSAK: false
+  use_CWKU: false
+  use_CPLT: false
+  only_pedestrian: false     
+
+  # Detection thresholds
+  track_new_thr: 0.86       
+  detection_high_thr: 0.8       
+  detection_low_thr: 0.3       
+
+  # Matching thresholds
+  first_matching_iou_thresh: 0.8  
+  first_matching_thresh: 0.8  
+  second_matching_iou_thresh: 0.4  
+
+  # Kalman and gating
+  std_weight_position: 1.0     
+  std_weight_velocity: 0.1     
+
+  # NSA (noise amplification) – only if you enable NSAK
+  nsa_amplify_factor: 2.0     
+
+  # Track lifecycle
+  max_age: 100     
+  init_age: 8       
+  track_confirm_thr: 0.86     
+
+  # Appearance / smoothing
+  ema_alpha: 0.9     
+
+  # Geometric filters
+  aspect_ratio_thr: 5.0     
+  area_thr: 10     
+
+  # Confidence decay (for tracks without fresh detections)
+  confidence_decay: 0.05    

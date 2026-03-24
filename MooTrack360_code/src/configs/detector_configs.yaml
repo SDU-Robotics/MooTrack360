@@ -1,0 +1,147 @@
+# configs/predict_params.yaml
+
+YOLO_predict:
+
+  # conf (float): Minimum confidence threshold for detections.
+  # Detections below this confidence will be discarded.
+  # Default: 0.25
+  conf: 0.25
+
+  # iou (float): Intersection Over Union threshold for NMS.
+  # Lower values result in fewer (but potentially higher precision) detections.
+  # Default: 0.7
+  iou: 0.7
+
+  # imgsz (int or [int, int]): Defines the image size for inference (height and width).
+  # E.g., 640 for square images or [640, 640]. 
+  # Default: 640
+  # Should match what the model is trained on
+  imgsz: 800
+
+  # half (bool): Enables FP16 inference on supported GPUs for faster processing.
+  # Default: False
+  half: true
+
+  # batch (int): Batch size for inference (works with directories, videos, or .txt inputs).
+  # Default: 1
+  batch: 1
+
+  # max_det (int): Maximum number of detections allowed per image.
+  # Default: 300
+  max_det: 100
+
+  # vid_stride (int): Frame stride for video inputs. Higher values skip more frames.
+  # Default: 1
+  vid_stride: 1
+
+  # stream_buffer (bool): Whether to queue incoming frames (True) or drop old frames (False).
+  # Default: False
+  stream_buffer: false
+
+  # visualize (bool): Activates model feature visualization for debugging/interpretation.
+  # Default: False
+  visualize: false
+
+  # augment (bool): Enables test-time augmentation (TTA) during inference.
+  # Default: False
+  augment: false
+
+  # agnostic_nms (bool): Enables class-agnostic NMS, merging overlapping boxes of different classes.
+  # Default: False
+  agnostic_nms: false
+
+  # classes (list[int] or None): Filters predictions to specified class IDs only.
+  # Default: None
+  classes: null
+
+  # retina_masks (bool): If True, returns segmentation masks in the original image size.
+  # If False, masks are returned in the inference image size.
+  # Default: False
+  retina_masks: false
+
+  # embed (list[int] or None): List of layer indices from which to extract feature embeddings.
+  # Useful for downstream tasks like clustering or similarity.
+  # Default: None
+  embed: null
+
+  # project (str or None): Project directory to save outputs (if saving is enabled).
+  # Default: None
+  project: null
+
+  # name (str or None): Name of the prediction run, creates a subdirectory in 'project' if saving.
+  # Default: None
+  name: null
+
+  #Whenever it should output stuff or not in the terminal
+  verbose: False
+
+RTDETR_predict:
+
+  # conf (float): Minimum confidence threshold for detections.
+  # Detections below this confidence will be discarded.
+  # Default: 0.25
+  conf: 0.25
+
+  # iou (float): Intersection Over Union threshold for NMS.
+  # Lower values result in fewer (but potentially higher precision) detections.
+  # Default: 0.7
+  iou: 0.7
+
+  # imgsz (int or [int, int]): Defines the image size for inference (height and width).
+  # E.g., 640 for square images or [640, 640]. 
+  # Default: 640
+  imgsz: 640
+
+  # half (bool): Enables FP16 inference on supported GPUs for faster processing.
+  # Default: False
+  half: false
+
+  # batch (int): Batch size for inference (works with directories, videos, or .txt inputs).
+  # Default: 1
+  batch: 1
+
+  # max_det (int): Maximum number of detections allowed per image.
+  # Default: 300
+  max_det: 300
+
+  # vid_stride (int): Frame stride for video inputs. Higher values skip more frames.
+  # Default: 1
+  vid_stride: 1
+
+  # stream_buffer (bool): Whether to queue incoming frames (True) or drop old frames (False).
+  # Default: False
+  stream_buffer: false
+
+  # visualize (bool): Activates model feature visualization for debugging/interpretation.
+  # Default: False
+  visualize: false
+
+  # augment (bool): Enables test-time augmentation (TTA) during inference.
+  # Default: False
+  augment: false
+
+  # agnostic_nms (bool): Enables class-agnostic NMS, merging overlapping boxes of different classes.
+  # Default: False
+  agnostic_nms: false
+
+  # classes (list[int] or None): Filters predictions to specified class IDs only.
+  # Default: None
+  classes: null
+
+  # retina_masks (bool): If True, returns segmentation masks in the original image size.
+  # If False, masks are returned in the inference image size.
+  # Default: False
+  retina_masks: false
+
+  # embed (list[int] or None): List of layer indices from which to extract feature embeddings.
+  # Useful for downstream tasks like clustering or similarity.
+  # Default: None
+  embed: null
+
+  # project (str or None): Project directory to save outputs (if saving is enabled).
+  # Default: None
+  project: null
+
+  # name (str or None): Name of the prediction run, creates a subdirectory in 'project' if saving.
+  # Default: None
+  name: null

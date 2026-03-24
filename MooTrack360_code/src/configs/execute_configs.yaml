@@ -1,0 +1,23 @@
+SCT:
+  stable: "Farm2"     # "stable3"        "stable2"  
+  area: "area4"         # "area4"          "area1" 
+  cameras: ["camera12"]  # ["camera12"]     ["camera2"]
+  detector:
+    type: yolo
+    model_path: "detection_models/custom_trained/model_name.engine" 
+    device: "cuda"
+  tracker:
+    type: "sort"
+  #max_targets: 100
+  img_resize: 0.5
+  viz: True
+  save_video: True
+  save_result: True           
+  save_database: True
+  trackeval: False
+  export_format: "CVAT"       # "MOT"  or  "CVAT" 
+  export_frames:  false       # set false if you only need gt.txt / XML 
+  output_path: "PaperRuns2/sort"
+  videos:  ["/video.mp4"] 
+
+

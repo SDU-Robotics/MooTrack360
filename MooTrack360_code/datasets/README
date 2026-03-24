@@ -1,0 +1,16 @@
+Custom datasets will be stored here for model training
+
+ground-truth
+- Was intitially setup for testing the HOTA Metric on the track_eval.py code, however this has not been fully implemented yet
+
+raw-images
+- Contains the extracted images that can be annotated (Use extract_frames_for_annotating) Once, annotated the annotations.xml¨
+can be exported from CVAT.
+
+training_ready
+- Contains the prepared dataset for yolo/coco formatted models. They are sorted in non_augmented and augmented dataset.
+
+  - non_augmented datasets can be created using the cvat_to_yolo_coco.py, which will convert the images and annotation.xml
+  from a raw-images folder
+
+  - augmented datasets can be created using the augment_dataset, which will convert
