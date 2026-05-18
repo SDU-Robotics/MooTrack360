@@ -275,14 +275,14 @@ This project is licensed under the Creative Commons Attributionâ€‘NonCommercialâ
 
 If you find this repo useful in your research, please consider citing the following papers:
 
-    @inproceedings{Diary2025cow,
-      title={DiaryCowDataset: A Novel Fisheye Camera Dataset for Robust Multi Diary Cow Detection and Tracking},
-      author={Rasmus, Toan, Dirk, Leon},
-      booktitle={?},
-      year={2025},
-      pages={?},
-      organization={?},
-      doi={?}
+    @inproceedings{MooTrack360,
+      title={MooTrack360: Novel Fisheye Camera Dataset for Robust Multi Dairy Cow Detection and Tracking},
+      author={Christiansen, Rasmus Gjerlund K. and Van Nguyen, Toan and Malskar, Lasse Rose and Bodenhagen, Leon and Kraft, Dirk },
+      booktitle={2026 IEEE/CVF Winter Conference on Applications of Computer Vision (WACV) },
+      year={2026},
+      pages={451-460},
+      organization={SDU Robotics},
+      doi={10.1109/WACV61042.2026.00052}
     }
 
 <a id="sec-acknowledgments"></a>
